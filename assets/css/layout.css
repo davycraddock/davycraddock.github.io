@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: Lato, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1a1a1a; 
+    backdrop-filter: blur(10px);
+    padding: 0px 40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+h1 {  
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+section {
+    padding-bottom: 20px;
+}
+
+section h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section h3 {
+    text-align: center;
+}
+
+p {
+    padding: 5px 0 10px 0;
+    text-align: center;
+}
+
+span a,
+p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    /* padding: 3rem 0 1rem; */
+}
+
+th {
+    padding: 10px 0;
+}
+
+td {
+    padding: 5px 0;
+}
+
+td a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+span {
+    text-align: center;
+}
+
+.white-text {
+    color: white;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.padding-bottom-30 {
+    padding-bottom: 30px;
+}
+
+.justified-70 {
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.justified-90 {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: hotpink;  
+  color: white;               
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.small {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+    
+    nav {
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronulla Triathlon Club</title>
+    <meta name="description" content="Join Cronulla Triathlon Club - Sydney's leading triathlon community for swimmers, cyclists, and runners of all levels.">
+    <meta name="keywords" content="triathlon, Sydney, swimming, cycling, running, triathlon club, sprint triathlon, Olympic distance, ironman, training">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cronulla Triathlon Club">
+    <meta property="og:description" content="Join Sydney's leading triathlon community for all levels.">
+    <meta property="og:url" content="https://www.cronullatriclub.com.au">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/layout-mobile.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/header-mobile.css">
+    <link rel="stylesheet" href="/assets/css/hero.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/dates.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/footer-mobile.css">
+    <link rel="stylesheet" href="/assets/css/scroller.css">
+
+</head>
+<body>
+  <section id="header-placeholder"></section>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="/assets/images/home/home.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h3 class="alt-font">Welcome to</h3>
+            <h3><strong>CRONULLA TRIATHLON CLUB</strong></h3>
+            <p>Cronulla Triathlon Club is situated in the birthplace of triathlon in Australia. Our club has a rich history of past and present champions, and members who come together in a shared passion for triathlon and community spirit.</p>
+        </div>
+    </section>
+
+    <section class="events-section">
+        <h1>Highlighted Events</h1>
+        <div class="slider-container">
+            <div class="slider" id="slider"></div>
+            <div class="slider-controls">
+                <button class="slider-btn" onclick="prevSlide()" aria-label="Previous slide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                    fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                </button>
+
+                <button class="slider-btn" onclick="nextSlide()" aria-label="Next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                        fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="weekly-events-section">
+        <h1>What's on this week</h1>
+        <div class="week-range" id="weekRange"></div>
+        <div class="weekly-events-container">
+            <div class="weekly-events-grid" id="weeklyEventsGrid"></div>
+        </div>
+    </section>
+
+
+        <section class="shop-section-container">
+        <div class="shop-section">
+            <h1>Club Shop</h1>
+       <div class="shop-notice">All items are for <strong>Club Members only</strong> and can only be picked up locally from our clubhouse.</div>            <div class="shop-grid">
+                <div class="shop-item">
+                    <div class="shop-item-image"><img src="/assets/images/home/shop/Caps.jpeg" alt="Caps"></div>
+                    <h3>Club Jersey</h3>
+                    <p>$89.99</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="shop-item">
+                    <div class="shop-item-image"><img src="/assets/images/home/shop/Socks.jpg" alt="Socks"></div>
+                    <h3>Race Cap</h3>
+                    <p>$24.99</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="shop-item">
+                    <div class="shop-item-image"><img src="/assets/images/home/shop/Trisuit.jpg" alt="Trisuit"></div>
+                    <h3>Tri Shorts</h3>
+                    <p>$69.99</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="shop-item">
+                    <div class="shop-item-image"><img src="/assets/images/home/shop/Caps.jpeg" alt="Caps"></div>
+                    <h3>Gear Bag</h3>
+                    <p>$49.99</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                                <div class="shop-item">
+                    <div class="shop-item-image"><img src="/assets/images/home/shop/Trisuit.jpg" alt="Trisuit"></div>
+                    <h3>Tri Shorts</h3>
+                    <p>$69.99</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="shop-item">
+                    <div class="shop-item-image"><img src="/assets/images/home/shop/Caps.jpeg" alt="Caps"></div>
+                    <h3>Gear Bag</h3>
+                    <p>$49.99</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="instagram-section">
+            <h3>Recent Activity</h3>
+            <script type="text/javascript" src="https://www.juicer.io/embed/cronullatriclub/embed-code.js" visible=6 async defer></script>
+
+        </section>
+
+<div class="strava-section">
+<iframe allowtransparency='true' frameborder='0' height='454px' scrolling='no' src='https://www.strava.com/clubs/71218/latest-rides/f9fd199076f8d420689ee9d7155df471d57378fc?show_rides=true' width='100%'></iframe>
+</div>
+
+        <section id="footer-placeholder"></section>
+
+         <div id="scroller-placeholder"></div>
+
+
+<script src="/assets/js/header.js"></script>
+<script src="/assets/js/footer.js"></script>
+<script src="/assets/js/events.js"></script>
+<script src="/assets/js/slider.js"></script>
+<script src="/assets/js/scroller.js"></script>
+</body>
+</html>

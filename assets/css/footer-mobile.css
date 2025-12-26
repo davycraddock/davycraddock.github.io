@@ -1,0 +1,59 @@
+ @media (max-width: 768px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .sponsor-logo {
+        padding: 20px 30px;
+        font-size: 1.2rem;
+        min-width: 120px;
+    }
+    
+    .social-icons {
+        gap: 20px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .social-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .sponsor-logo.gold {
+        font-size: 1.3rem;
+    }
+    
+    .sponsor-logo.silver {
+        font-size: 1.1rem;
+    }
+    
+    .sponsor-logo.bronze {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsors-grid {
+        gap: 1rem;
+    }
+    
+    .sponsor-logo.gold {
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .sponsor-logo.silver {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .sponsor-logo.bronze {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
