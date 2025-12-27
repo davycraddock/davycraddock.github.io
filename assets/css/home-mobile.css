@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .slider-container {
+        overflow-x: hidden;
+    }
+
+    .slider-btn {
+        padding: 5px;
+        margin: 0 0;
+    }
+}

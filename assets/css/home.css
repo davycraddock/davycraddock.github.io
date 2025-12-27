@@ -334,6 +334,15 @@
     border-radius: 20px;
 }
 
+
+html body .juicer-feed h1.referral {
+    display:none !important;
+}
+
+html body .juicer-feed h1.referral a {
+    display:none !important;
+}
+
 .instagram-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
