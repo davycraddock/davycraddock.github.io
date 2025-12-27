@@ -43,17 +43,14 @@
     }
     
     .sponsor-logo.gold {
-        padding: 1.2rem 2rem;
         font-size: 1.1rem;
     }
     
     .sponsor-logo.silver {
-        padding: 1rem 1.5rem;
         font-size: 1rem;
     }
     
     .sponsor-logo.bronze {
-        padding: 0.7rem 1.2rem;
         font-size: 0.85rem;
     }
 }

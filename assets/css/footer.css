@@ -33,13 +33,6 @@
     transform: scale(1.1);
 }
 
-/* .copyright-section {
-    text-align: center;
-    padding-top: 2rem;
-    color: #888;
-    font-size: 0.9rem;
-} */
-
 .copyright-section p {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.7);
