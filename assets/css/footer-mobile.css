@@ -40,6 +40,10 @@
 @media (max-width: 480px) {
     .sponsors-grid {
         gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
     }
     
     .sponsor-logo.gold {

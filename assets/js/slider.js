@@ -57,11 +57,13 @@ function populateUpcomingEvents() {
         const formattedDate = eventDate.toLocaleDateString('en-US', options);
         
         eventCard.innerHTML = `
-            <div class="event-image"><img src="assets/images/components/events/${event.image}" alt="${event.name}"></div>
+            <div class="event-overlay">
+                <div class="event-image"><img src="assets/images/components/events/${event.image}" alt="${event.name}"></div>
+            </div>
             <div class="event-details">
                 <span class="event-date">${event.start} ${formattedDate}</span>
                 <h3>${event.name}</h3>
-                <p class="event-subtitle">${event.subtitle}</p>
+                <p class="event-subtitle limit-lines-5">${event.subtitle}</p>
                 <div class="weekly-event-type">${typeLabels[event.nav]}</div>
             </div>
         `;
@@ -102,7 +104,7 @@ function generateWeeklyEvents() {
     const today = new Date();
     const dayOfWeek = today.getDay();
     const startOfWeek = new Date(today);
-    startOfWeek.setDate(today.getDate() - dayOfWeek);
+    startOfWeek.setDate(today.getDate() - dayOfWeek + 1);
     startOfWeek.setHours(0, 0, 0, 0);
     
     const endOfWeek = new Date(startOfWeek);
