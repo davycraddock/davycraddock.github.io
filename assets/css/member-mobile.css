@@ -2,4 +2,9 @@
     .member-name {
         font-size: 1.4rem;
     }
+
+    .committee-grid .member-card {
+        margin-bottom: 60px;
+        padding: 60px 20px;
+    }
 }
