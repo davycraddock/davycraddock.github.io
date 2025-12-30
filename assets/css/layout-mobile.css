@@ -13,4 +13,15 @@
     nav {
         justify-content: flex-end;
     }
+
+    .justified-90-mob {
+        text-align: justify;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .max-width-90-mob{
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
