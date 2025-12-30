@@ -75,7 +75,7 @@ th {
 }
 
 td {
-    padding: 5px;
+    padding: 5px 0;
 }
 
 td a {
@@ -140,6 +140,7 @@ span {
 
 .limit-lines-5 {
     display: -webkit-box;
+    line-clamp: 5; /* Number of lines */
     -webkit-line-clamp: 5; /* Number of lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
