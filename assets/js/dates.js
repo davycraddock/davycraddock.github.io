@@ -1,9 +1,9 @@
-function populateDates(eventId, maxEvents) {
+function populateDates(eventId, maxEvents, from = null, to = null) {
     const container = document.getElementById('datesEventsGrid');
     if (!container) return;
 
     container.innerHTML = '';
-    const thisEvents = populateEventDates(eventId);
+    const thisEvents = populateEventDates(eventId, from, to);
     let filteredEvents = thisEvents;
 
     if (maxEvents && thisEvents.length > maxEvents) {
@@ -42,6 +42,8 @@ function populateDates(eventId, maxEvents) {
             card.innerHTML = `<div class="dates-events-content">
             <div class="dates-events-info">
                     <div class="dates-events-day">${x.event.start} ${dayName}, ${monthDay}</div>
+                    ${x.event.registerurl ? `<p><a href="${x.event.registerurl}" target="_blank">Register Here</a></p>` : ""}
+                    ${x.event.resultsurl ? `<p><a href="${x.event.resultsurl}" target="_blank">Results</a></p>` : ""}
                 </div>
             </div>
         `;
@@ -60,6 +62,8 @@ async function loadDates() {
         const backgroundImage = placeholder.dataset.backgroundImage;
         const eventId = placeholder.dataset.eventId;
         const maxEvents = placeholder.dataset.maxEvents || null;
+        const from = placeholder.dataset.from || null;
+        const to = placeholder.dataset.to || null;
 
         placeholder.innerHTML = html;
 
@@ -67,7 +71,7 @@ async function loadDates() {
         document.getElementById("datesEventSection").style.backgroundSize = "cover";
         document.getElementById("datesEventSection").style.backgroundPosition = "center";
         document.getElementById("datesEventSection").style.backgroundAttachment = "fixed";
-        populateDates(eventId, maxEvents);
+        populateDates(eventId, maxEvents, from, to);
 
     } catch (error) {
         console.error('Error loading dates:', error);
