@@ -94,3 +94,8 @@
     color: #00bfff;
     padding-left: 30px;
 }
+
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown.active .nav-dropdown-menu {
+        display: block;
+    } 
