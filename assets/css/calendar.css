@@ -126,10 +126,19 @@
     background: linear-gradient(135deg, #43e97b, #38f9d7);
 }
 
-.day-cell.social {
-    background: linear-gradient(135deg, #fa709a, #fee140);
+.day-cell.robertson-ride,
+.day-cell.christmas-run,
+.day-cell.presentation {
+    background: linear-gradient(135deg, #fee140, #fee140);
 }
 
+.day-cell.club-champs,
+.day-cell.stu-ford,
+.day-cell.jan-hhod,
+.day-cell.rwa,
+.day-cell.time-trials,
+.day-cell.duathlon,
+.day-cell.triathlon,
 .day-cell.event {
     background: linear-gradient(135deg, #f570fa, #fe40ce);
 }

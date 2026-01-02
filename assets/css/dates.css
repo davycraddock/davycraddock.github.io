@@ -63,3 +63,11 @@
     opacity: 0.9;
     text-align: left;
 }
+
+.dates-events-a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    text-align: left; 
+}
