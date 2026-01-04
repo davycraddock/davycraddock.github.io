@@ -13,13 +13,15 @@ async function loadHeader() {
                 e.preventDefault();
                 e.stopPropagation();
                 
+                const isActive = dropdown.classList.contains('active');
+                
                 dropdowns.forEach(d => {
-                    if (d !== dropdown) {
-                        d.classList.remove('active');
-                    }
+                    d.classList.remove('active');
                 });
                 
-                dropdown.classList.toggle('active');
+                if (!isActive) {
+                    dropdown.classList.add('active');
+                }
             });
         });
 
