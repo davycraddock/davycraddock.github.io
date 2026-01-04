@@ -32,4 +32,6 @@ function initTimeline() {
     checkScroll();
 }
 
+document.getElementById("history-year").textContent = new Date().getFullYear();
+
 document.addEventListener('DOMContentLoaded', initTimeline);
