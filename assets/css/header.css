@@ -27,6 +27,7 @@
     z-index: 1001;
 }
 
+.nav-dropdown.active .nav-dropdown-menu 
 .nav-dropdown:hover .nav-dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -95,7 +96,7 @@
     padding-left: 30px;
 }
 
-    .nav-dropdown:hover .nav-dropdown-menu,
-    .nav-dropdown.active .nav-dropdown-menu {
-        display: block;
-    } 
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.active .nav-dropdown-menu {
+    display: block;
+} 
