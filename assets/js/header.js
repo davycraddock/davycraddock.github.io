@@ -9,16 +9,17 @@ async function loadHeader() {
         dropdowns.forEach(dropdown => {
             const toggle = dropdown.querySelector('.nav-dropdown-toggle');
             
-        toggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            const isCurrentlyOpen = dropdown.classList.contains('active');
-            
-            dropdowns.forEach(d => d.classList.remove('active'));
-            
-            if (!isCurrentlyOpen) {
-                dropdown.classList.add('active');
-            }
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const isCurrentlyOpen = dropdown.classList.contains('active');
+                
+                dropdowns.forEach(d => d.classList.remove('active'));
+                
+                if (!isCurrentlyOpen) {
+                    dropdown.classList.add('active');
+                }
+            });
         });
 
         document.addEventListener('click', (e) => {
