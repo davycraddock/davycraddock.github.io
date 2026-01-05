@@ -17,3 +17,9 @@
         max-width: 52px;
     }
 }
+
+@media (max-width: 599px) {
+    .day-cell {
+        max-width: 48px;
+    }
+}
