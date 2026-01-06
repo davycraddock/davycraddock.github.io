@@ -114,9 +114,13 @@
 
 .sponsor-logo.gold {
     padding: 0;
-    font-size: 1.5rem;
+   font-size: 0;
     border: 3px solid #ffd700;
     box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+.sponsor-logo.gold a img {
+ font-size: 1.5rem;
 }
 
 .sponsor-logo.gold:hover {
@@ -125,9 +129,13 @@
 
 .sponsor-logo.silver {
     padding: 0;
-    font-size: 1.2rem;
+    font-size: 0;
     border: 2px solid #c0c0c0;
     box-shadow: 0 4px 15px rgba(192, 192, 192, 0.3);
+}
+
+.sponsor-logo.silver a img {
+ font-size: 1.2rem;
 }
 
 .sponsor-logo.silver:hover {
@@ -136,10 +144,15 @@
 
 .sponsor-logo.bronze {
     padding: 0;
-    font-size: 1rem;
+    font-size: 0;
     border: 2px solid #cd7f32;
     box-shadow: 0 4px 10px rgba(205, 127, 50, 0.3);
 }
+
+.sponsor-logo.bronze a img {
+ font-size: 1rem;
+}
+
 
 .sponsor-logo.bronze:hover {
     box-shadow: 0 6px 20px rgba(205, 127, 50, 0.5);

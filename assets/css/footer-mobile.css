@@ -24,15 +24,15 @@
         height: 20px;
     }
     
-    .sponsor-logo.gold {
+    .sponsor-logo.gold a img {
         font-size: 1.3rem;
     }
     
-    .sponsor-logo.silver {
+    .sponsor-logo.silver a img {
         font-size: 1.1rem;
     }
     
-    .sponsor-logo.bronze {
+    .sponsor-logo.bronze a img {
         font-size: 0.9rem;
     }
 }
@@ -46,15 +46,15 @@
         align-items: center;
     }
     
-    .sponsor-logo.gold {
+    .sponsor-logo.gold a img {
         font-size: 1.1rem;
     }
     
-    .sponsor-logo.silver {
+    .sponsor-logo.silver a img {
         font-size: 1rem;
     }
     
-    .sponsor-logo.bronze {
+    .sponsor-logo.bronze a img {
         font-size: 0.85rem;
     }
 }
