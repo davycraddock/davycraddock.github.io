@@ -22,8 +22,24 @@ async function loadHeader() {
             });
         });
 
+
+        // Close dropdowns when clicking outside OR when clicking a dropdown link
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-dropdown')) {
+            // Check if click is a dropdown menu link
+            const clickedLink = e.target.closest('.nav-dropdown-menu a');
+            
+            if (clickedLink) {
+                // Allow the link to work, just close the dropdown
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+                return; // Let the link navigate normally
+            }
+            
+            // Check if click is outside all dropdowns
+            const clickedInsideDropdown = e.target.closest('.nav-dropdown');
+            
+            if (!clickedInsideDropdown) {
                 dropdowns.forEach(dropdown => {
                     dropdown.classList.remove('active');
                 });

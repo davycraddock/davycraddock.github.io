@@ -25,11 +25,13 @@
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     margin-top: 20px;
     z-index: 1001;
+    pointer-events: none;
 }
 
 .nav-dropdown.active .nav-dropdown-menu{
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateX(-50%) translateY(0);
 }
 
@@ -86,6 +88,7 @@
     text-decoration: none;
     padding: 12px 25px;
     font-size: 1rem;
+    pointer-events: auto;
     transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
 }
 
