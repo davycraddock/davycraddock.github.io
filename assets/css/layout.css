@@ -161,3 +161,8 @@ span {
 .float-right {
     float: right;
 }
+
+.content-placeholder {
+    max-width: 1400px;
+    margin: auto;
+}
