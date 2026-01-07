@@ -30,6 +30,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     cursor: pointer;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .event-image {
@@ -45,7 +47,7 @@
     display: block;
     border-radius: 15px;
     max-width: 450px;
-    margin: auto;
+    float: right;
 }
 
 
