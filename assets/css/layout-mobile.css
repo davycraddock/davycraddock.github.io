@@ -25,3 +25,11 @@
         margin: 0 auto;
     }
 }
+
+@media (min-width: 1400px) {
+    .justified-50-wide {
+        text-align: justify;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
