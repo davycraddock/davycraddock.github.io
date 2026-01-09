@@ -94,15 +94,16 @@
     background-attachment: fixed;
     background-size: 150px;
     
-    animation: spin 1turn linear;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
     animation-timeline: spin-scroll;
-    animation-duration: 1scroll;
     
     z-index: -1;
 }
 
 /* Rotation keyframes */
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from { transform: rotate(0turn); }
+  to { transform: rotate(1turn); }
 }
