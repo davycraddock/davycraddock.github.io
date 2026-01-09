@@ -113,8 +113,10 @@ async function loadDates() {
                 const scrollY = window.pageYOffset || document.documentElement.scrollTop;
                 const rotation = (scrollY * 0.3) % 360;
                 
-                logos.forEach(logo => {
-                    logo.style.transform = `rotateY(${rotation}deg)`;
+                logos.forEach((logo, index) => {
+                    // Every other logo gets 180 degrees added
+                    const offset = (index % 2) * 180;
+                    logo.style.transform = `rotateY(${rotation + offset}deg)`;
                 });
             }
 
