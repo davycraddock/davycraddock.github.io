@@ -111,12 +111,12 @@ async function loadDates() {
                 
                 // Only apply effect when section is in view
                 if (scrollY + window.innerHeight > sectionTop && scrollY < sectionBottom) {
-                    const relativeScroll = scrollY - sectionTop;
+                    //const relativeScroll = scrollY - sectionTop;
                     
                     // Parallax effect - background moves slower
-                    if (bgContainer) {
-                        bgContainer.style.transform = `translateY(${relativeScroll * 0.5}px)`;
-                    }
+                    //if (bgContainer) {
+                    //    bgContainer.style.transform = `translateY(${relativeScroll * 0.5}px)`;
+                    //}
                     
                     // Rotate logos based on scroll
                     const rotation = (scrollY * 0.3) % 360;
