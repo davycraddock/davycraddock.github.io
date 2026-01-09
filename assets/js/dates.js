@@ -75,49 +75,67 @@ async function loadDates() {
         else {
             document.getElementById("datesEventBackground").classList.add("dates-events-background");
 
-            const bg = document.getElementById('datesEventBackground');
+            const bgContainer = document.getElementById('datesEventBackground');
             const logos = [];
-    
-            function createBackground() {
-                bg.innerHTML = ''; // Clear existing coins
+            
+            function createLogos() {
+                bgContainer.innerHTML = '';
                 logos.length = 0;
-                
-                const logoSize = 100; // 80px coin + 20px spacing
-                const cols = Math.ceil(window.innerWidth / logoSize) + 2;
-                const rows = Math.ceil(window.innerHeight / logoSize) + 10; // Extra rows for scrolling
-                
+            
+                const logoSize = 180; // 150px logo + 30px spacing
+                const sectionWidth = section.offsetWidth;
+                const sectionHeight = section.offsetHeight;
+            
+                const cols = Math.ceil(sectionWidth / logoSize) + 1;
+                const rows = Math.ceil(sectionHeight / logoSize) + 2;
+            
                 for (let row = 0; row < rows; row++) {
                     for (let col = 0; col < cols; col++) {
                         const logo = document.createElement('div');
-                        logo.className = 'dates-logo-background';
+                        logo.className = 'spinning-logo';
                         logo.style.left = (col * logoSize) + 'px';
                         logo.style.top = (row * logoSize) + 'px';
-                        bg.appendChild(logo);
+                        bgContainer.appendChild(logo);
                         logos.push(logo);
                     }
                 }
             }
-    
-            // Update parallax and coin rotation based on scroll
-            function updateParallax() {
-                const scrollY = window.scrollY;
+
+            // Update logo rotation based on scroll with parallax
+            function updateLogos() {
                 
-                // Parallax effect - background moves slower (0.5 speed)
-                const parallaxOffset = scrollY * 0.5;
-                bg.style.transform = `translateY(${parallaxOffset}px)`;
+                const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
                 
-                // Coin rotation based on scroll
-                const rotation = (scrollY * 0.3) % 360;
-                
-                logos.forEach(logo => {
-                    logo.style.transform = `rotateY(${rotation}deg)`;
-                });
+                // Only apply effect when section is in view
+                if (scrollY + window.innerHeight > sectionTop && scrollY < sectionBottom) {
+                    const relativeScroll = scrollY - sectionTop;
+                    
+                    // Parallax effect - background moves slower
+                    if (bgContainer) {
+                        bgContainer.style.transform = `translateY(${relativeScroll * 0.5}px)`;
+                    }
+                    
+                    // Rotate logos based on scroll
+                    const rotation = (scrollY * 0.3) % 360;
+                    
+                    logos.forEach(logo => {
+                        logo.style.transform = `rotateY(${rotation}deg)`;
+                    });
+                }
             }
-    
+
             // Initialize
-            createBackground();
-            updateParallax();
-                
+            createLogos();
+            updateLogos();
+        
+            // Event listeners
+            window.addEventListener('scroll', updateLogos);
+            window.addEventListener('resize', function() {
+                createLogos();
+                updateLogos();
+            });                
         }
         
         populateDates(eventId, maxEvents, from, to);
