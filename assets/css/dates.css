@@ -72,3 +72,37 @@
     letter-spacing: 1px;
     text-align: left; 
 }
+
+@scroll-timeline spin-scroll {
+    source: auto;
+    orientation: block;
+}
+
+.spin-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.spin-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)), url(/assets/images/components/dates/invminicirclelogo.png);
+    background-attachment: fixed;
+    background-size: 150px;
+    
+    animation: spin 1turn linear;
+    animation-timeline: spin-scroll;
+    animation-duration: 1scroll;
+    
+    z-index: -1;
+}
+
+/* Rotation keyframes */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
