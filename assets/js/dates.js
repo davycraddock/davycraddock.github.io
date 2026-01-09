@@ -106,25 +106,11 @@ async function loadDates() {
             function updateLogos() {
                 
                 const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-                const sectionTop = section.offsetTop;
-                const sectionBottom = sectionTop + section.offsetHeight;
+                const rotation = (scrollY * 0.3) % 360;
                 
-                // Only apply effect when section is in view
-                if (scrollY + window.innerHeight > sectionTop && scrollY < sectionBottom) {
-                    //const relativeScroll = scrollY - sectionTop;
-                    
-                    // Parallax effect - background moves slower
-                    //if (bgContainer) {
-                    //    bgContainer.style.transform = `translateY(${relativeScroll * 0.5}px)`;
-                    //}
-                    
-                    // Rotate logos based on scroll
-                    const rotation = (scrollY * 0.3) % 360;
-                    
-                    logos.forEach(logo => {
-                        logo.style.transform = `rotateY(${rotation}deg)`;
-                    });
-                }
+                logos.forEach(logo => {
+                    logo.style.transform = `rotateY(${rotation}deg)`;
+                });
             }
 
             // Initialize
