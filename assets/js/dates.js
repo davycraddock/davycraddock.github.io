@@ -66,11 +66,15 @@ async function loadDates() {
         const to = placeholder.dataset.to || null;
 
         placeholder.innerHTML = html;
-
-        document.getElementById("datesEventSection").style.backgroundImage = `linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)), url('${backgroundImage}') `;
-        document.getElementById("datesEventSection").style.backgroundSize = "cover";
-        document.getElementById("datesEventSection").style.backgroundPosition = "center";
-        document.getElementById("datesEventSection").style.backgroundAttachment = "fixed";
+        if(backgroundImage) {
+            document.getElementById("datesEventSection").style.backgroundImage = `linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)), url('${backgroundImage}') `;
+            document.getElementById("datesEventSection").style.backgroundSize = "cover";
+            document.getElementById("datesEventSection").style.backgroundPosition = "center";
+            document.getElementById("datesEventSection").style.backgroundAttachment = "fixed";
+        }
+        else {
+            document.getElementById("datesEventSection").classList.add("spin-background");
+        }
         populateDates(eventId, maxEvents, from, to);
 
     } catch (error) {
