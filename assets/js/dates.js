@@ -73,7 +73,7 @@ async function loadDates() {
             document.getElementById("datesEventSection").style.backgroundAttachment = "fixed";
         }
         else {
-            document.getElementById("datesEventSection").classList.add("spin-background");
+            document.getElementById("datesEventbackground").classList.add("spin-background");
         }
         populateDates(eventId, maxEvents, from, to);
 
