@@ -116,7 +116,7 @@ async function loadDates() {
                 logos.forEach((logo, index) => {
                     // Every other logo gets 180 degrees added
                     const offset = (index % 2) * 90;
-                    logo.style.transform = `rotateY(${rotation + offset}deg)`;
+                    logo.style.transform = `rotateY(${rotation}deg)`;
                 });
             }
 
