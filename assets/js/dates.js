@@ -71,10 +71,15 @@ async function loadDates() {
             document.getElementById("datesEventSection").style.backgroundSize = "cover";
             document.getElementById("datesEventSection").style.backgroundPosition = "center";
             document.getElementById("datesEventSection").style.backgroundAttachment = "fixed";
+
+            populateDates(eventId, maxEvents, from, to);
         }
         else {
             document.getElementById("datesEventBackground").classList.add("dates-events-background");
             document.getElementById("datesEventSection").style.background = "linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4))";
+
+            populateDates(eventId, maxEvents, from, to);
+            
             const section = document.getElementById('datesEventSection');
             const bgContainer = document.getElementById('datesEventBackground');
             const logos = [];
@@ -125,7 +130,7 @@ async function loadDates() {
             });                
         }
         
-        populateDates(eventId, maxEvents, from, to);
+        
 
     } catch (error) {
         console.error('Error loading dates:', error);
