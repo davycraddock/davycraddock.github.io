@@ -78,12 +78,12 @@
     orientation: block;
 }
 
-.spin-bg {
+.spin-background {
     position: relative;
     overflow: hidden;
 }
 
-.spin-bg::before {
+.spin-background::before {
     content: "";
     position: absolute;
     inset: 0;
