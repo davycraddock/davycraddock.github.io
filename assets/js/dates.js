@@ -74,7 +74,52 @@ async function loadDates() {
         }
         else {
             document.getElementById("datesEventBackground").classList.add("dates-events-background");
+
+            const bg = document.getElementById('datesEventBackground');
+            const logos = [];
+    
+            function createBackground() {
+                bg.innerHTML = ''; // Clear existing coins
+                logos.length = 0;
+                
+                const logoSize = 100; // 80px coin + 20px spacing
+                const cols = Math.ceil(window.innerWidth / logoSize) + 2;
+                const rows = Math.ceil(window.innerHeight / logoSize) + 10; // Extra rows for scrolling
+                
+                for (let row = 0; row < rows; row++) {
+                    for (let col = 0; col < cols; col++) {
+                        const logo = document.createElement('div');
+                        logo.className = 'coin';
+                        logo.style.left = (col * logoSize) + 'px';
+                        logo.style.top = (row * logoSize) + 'px';
+                        bg.appendChild(logo);
+                        logos.push(logo);
+                    }
+                }
+            }
+    
+            // Update parallax and coin rotation based on scroll
+            function updateParallax() {
+                const scrollY = window.scrollY;
+                
+                // Parallax effect - background moves slower (0.5 speed)
+                const parallaxOffset = scrollY * 0.5;
+                bg.style.transform = `translateY(${parallaxOffset}px)`;
+                
+                // Coin rotation based on scroll
+                const rotation = (scrollY * 0.3) % 360;
+                
+                logos.forEach(logo => {
+                    logo.style.transform = `rotateY(${rotation}deg)`;
+                });
+            }
+    
+            // Initialize
+            createBackground();
+            updateParallax();
+                
         }
+        
         populateDates(eventId, maxEvents, from, to);
 
     } catch (error) {
