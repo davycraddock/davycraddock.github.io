@@ -66,99 +66,16 @@ async function loadDates() {
         const to = placeholder.dataset.to || null;
 
         placeholder.innerHTML = html;
-                    document.getElementById("datesEventSection").style.background = 'linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4))';
+        document.getElementById("datesEventSection").style.background = 'linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4))';
+        
         if(backgroundImage) {
             document.getElementById("datesEventSection").style.backgroundImage = `linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)), url('${backgroundImage}') `;
             document.getElementById("datesEventSection").style.backgroundSize = "cover";
             document.getElementById("datesEventSection").style.backgroundPosition = "center";
-            document.getElementById("datesEventSection").style.backgroundAttachment = "fixed";
-
-            
+            document.getElementById("datesEventSection").style.backgroundAttachment = "fixed";            
         }
-populateDates(eventId, maxEvents, from, to);
-        // else {
-        //     document.getElementById("datesEventBackground").classList.add("dates-events-background");
-        //     document.getElementById("datesEventSection").style.background = "linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4))";
 
-        //     populateDates(eventId, maxEvents, from, to);
-            
-        //     const section = document.getElementById('datesEventSection');
-        //     const bgContainer = document.getElementById('datesEventBackground');
-        //     const logos = [];
-            
-        //     function createLogos() {
-        //         bgContainer.innerHTML = '';
-        //         logos.length = 0;
-            
-        //         let logoSize = 180; // 150px logo + 30px spacing
-        //         if(section.offsetWidth < 768)
-        //         {
-        //             logoSize = 105;
-        //         }
-        //         const sectionWidth = section.offsetWidth;
-        //         const sectionHeight = section.offsetHeight;
-            
-        //         const cols = Math.floor(sectionWidth / logoSize);
-        //         const rows = Math.ceil(sectionHeight / logoSize);
-            
-        //    //     const totalGridWidth = cols * logoSize;
-        //      //   const offsetX = (sectionWidth - totalGridWidth) / 2;
-                
-        //        // for (let row = 0; row < rows; row++) {
-        //          //   for (let col = 0; col < cols; col++) {
-        //            //     const logo = document.createElement('div');
-        //              //   logo.className = 'dates-logo-background';
-        //              //   logo.style.left = (offsetX + col * logoSize) + 'px';
-        //              //   logo.style.top = (row * logoSize) + 'px';
-        //              //   bgContainer.appendChild(logo);
-        //              //   logos.push(logo);
-        //            // }
-        //        // }
-
-        //         const totalGridWidth = cols * logoSize;
-        //         const totalGridHeight = rows * logoSize;
-        //         const offsetX = (sectionWidth - totalGridWidth) / 2;
-        //         const offsetY = (sectionHeight - totalGridHeight) / 2;
-                
-        //         for (let row = 0; row < rows; row++) {
-        //             for (let col = 0; col < cols; col++) {
-        //                 const logo = document.createElement('div');
-        //                 logo.className = 'dates-logo-background';
-        //                 logo.style.left = (offsetX + col * logoSize) + 'px';
-        //                 logo.style.top = (offsetY + row * logoSize) + 'px';
-        //                 bgContainer.appendChild(logo);
-        //                 logos.push(logo);
-        //             }
-        //         }
-        //     }
-
-        //     // Update logo rotation based on scroll with parallax
-        //     function updateLogos() {
-                
-        //         const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        //         const rotation = (scrollY * 0.3) % 360;
-                
-        //         logos.forEach((logo, index) => {
-        //             // Every other logo gets 180 degrees added
-        //             const offset = (index % 2) * 90;
-        //             logo.style.transform = `rotateY(${rotation}deg)`;
-        //         });
-        //     }
-
-        //     // Initialize
-        //     createLogos();
-        //     updateLogos();
-        
-        //     // Event listeners
-        //     window.addEventListener('scroll', updateLogos);
-        //     window.addEventListener('resize', function() {
-        //         createLogos();
-        //         updateLogos();
-        //     });                
-        // }
-        
-        
-
+        populateDates(eventId, maxEvents, from, to);
     } catch (error) {
         console.error('Error loading dates:', error);
     }
