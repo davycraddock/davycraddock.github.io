@@ -89,9 +89,9 @@ async function loadDates() {
                 logos.length = 0;
             
                 let logoSize = 180; // 150px logo + 30px spacing
-                if(section.offsetWidth < 360)
+                if(section.offsetWidth < 768)
                 {
-                    logoSize = 160;
+                    logoSize = 105;
                 }
                 const sectionWidth = section.offsetWidth;
                 const sectionHeight = section.offsetHeight;
