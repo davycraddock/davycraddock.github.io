@@ -77,6 +77,7 @@ th {
 
 td {
     padding: 5px 10px 5px 0px;
+    text-align: left;
 }
 
 td:last-child {
@@ -95,6 +96,10 @@ span {
 
 table {
    width: -webkit-fill-available;
+}
+
+li {
+    line-height: 1.6;
 }
 
 .white-text {
