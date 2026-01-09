@@ -88,7 +88,7 @@ async function loadDates() {
                 const sectionHeight = section.offsetHeight;
             
                 const cols = Math.ceil(sectionWidth / logoSize) + 1;
-                const rows = Math.ceil(sectionHeight / logoSize) + 2;
+                const rows = Math.ceil(sectionHeight / logoSize) + 4;
             
                 for (let row = 0; row < rows; row++) {
                     for (let col = 0; col < cols; col++) {
