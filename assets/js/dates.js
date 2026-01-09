@@ -92,7 +92,7 @@ async function loadDates() {
                 for (let row = 0; row < rows; row++) {
                     for (let col = 0; col < cols; col++) {
                         const logo = document.createElement('div');
-                        logo.className = 'spinning-logo';
+                        logo.className = 'dates-logo-background';
                         logo.style.left = (col * logoSize) + 'px';
                         logo.style.top = (row * logoSize) + 'px';
                         bgContainer.appendChild(logo);
