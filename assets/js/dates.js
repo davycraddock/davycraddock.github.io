@@ -88,7 +88,7 @@ async function loadDates() {
                 bgContainer.innerHTML = '';
                 logos.length = 0;
             
-                let logoSize = 170; // 150px logo + 30px spacing
+                let logoSize = 180; // 150px logo + 30px spacing
                 if(section.offsetWidth < 768)
                 {
                     logoSize = 105;
@@ -99,15 +99,31 @@ async function loadDates() {
                 const cols = Math.floor(sectionWidth / logoSize);
                 const rows = Math.ceil(sectionHeight / logoSize);
             
+           //     const totalGridWidth = cols * logoSize;
+             //   const offsetX = (sectionWidth - totalGridWidth) / 2;
+                
+               // for (let row = 0; row < rows; row++) {
+                 //   for (let col = 0; col < cols; col++) {
+                   //     const logo = document.createElement('div');
+                     //   logo.className = 'dates-logo-background';
+                     //   logo.style.left = (offsetX + col * logoSize) + 'px';
+                     //   logo.style.top = (row * logoSize) + 'px';
+                     //   bgContainer.appendChild(logo);
+                     //   logos.push(logo);
+                   // }
+               // }
+
                 const totalGridWidth = cols * logoSize;
+                const totalGridHeight = rows * logoSize;
                 const offsetX = (sectionWidth - totalGridWidth) / 2;
+                const offsetY = (sectionHeight - totalGridHeight) / 2;
                 
                 for (let row = 0; row < rows; row++) {
                     for (let col = 0; col < cols; col++) {
                         const logo = document.createElement('div');
                         logo.className = 'dates-logo-background';
                         logo.style.left = (offsetX + col * logoSize) + 'px';
-                        logo.style.top = (row * logoSize) + 'px';
+                        logo.style.top = (offsetY + row * logoSize) + 'px';
                         bgContainer.appendChild(logo);
                         logos.push(logo);
                     }
