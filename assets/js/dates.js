@@ -88,7 +88,11 @@ async function loadDates() {
                 bgContainer.innerHTML = '';
                 logos.length = 0;
             
-                const logoSize = 180; // 150px logo + 30px spacing
+                let logoSize = 180; // 150px logo + 30px spacing
+                if(section.offsetWidth < 360)
+                {
+                    logoSize = 160;
+                }
                 const sectionWidth = section.offsetWidth;
                 const sectionHeight = section.offsetHeight;
             
