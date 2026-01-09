@@ -74,7 +74,7 @@ async function loadDates() {
         }
         else {
             document.getElementById("datesEventBackground").classList.add("dates-events-background");
-
+            const section = document.getElementById('datesEventSection');
             const bgContainer = document.getElementById('datesEventBackground');
             const logos = [];
             
