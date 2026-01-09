@@ -74,6 +74,7 @@ async function loadDates() {
         }
         else {
             document.getElementById("datesEventBackground").classList.add("dates-events-background");
+            document.getElementById("datesEventSection").style.background = "linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4))";
             const section = document.getElementById('datesEventSection');
             const bgContainer = document.getElementById('datesEventBackground');
             const logos = [];
