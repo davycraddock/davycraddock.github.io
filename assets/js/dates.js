@@ -92,7 +92,7 @@ async function loadDates() {
                 const sectionWidth = section.offsetWidth;
                 const sectionHeight = section.offsetHeight;
             
-                const cols = Math.ceil(sectionWidth / logoSize);
+                const cols = Math.floor(sectionWidth / logoSize);
                 const rows = Math.ceil(sectionHeight / logoSize);
             
                 for (let row = 0; row < rows; row++) {
@@ -115,7 +115,7 @@ async function loadDates() {
                 
                 logos.forEach((logo, index) => {
                     // Every other logo gets 180 degrees added
-                    const offset = (index % 2) * 180;
+                    const offset = (index % 2) * 90;
                     logo.style.transform = `rotateY(${rotation + offset}deg)`;
                 });
             }
