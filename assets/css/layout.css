@@ -93,6 +93,10 @@ span {
     text-align: center;
 }
 
+table {
+   width: -webkit-fill-available;
+}
+
 .white-text {
     color: white;
 }
