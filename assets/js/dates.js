@@ -99,11 +99,14 @@ async function loadDates() {
                 const cols = Math.floor(sectionWidth / logoSize);
                 const rows = Math.ceil(sectionHeight / logoSize);
             
+                const totalGridWidth = cols * logoSize;
+                const offsetX = (sectionWidth - totalGridWidth) / 2;
+                
                 for (let row = 0; row < rows; row++) {
                     for (let col = 0; col < cols; col++) {
                         const logo = document.createElement('div');
-                        logo.className = 'dates-logo-background';
-                        logo.style.left = (col * logoSize) + 'px';
+                        logo.className = 'dates-logo-background;
+                        logo.style.left = (offsetX + col * logoSize) + 'px';
                         logo.style.top = (row * logoSize) + 'px';
                         bgContainer.appendChild(logo);
                         logos.push(logo);
