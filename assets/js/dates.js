@@ -89,7 +89,7 @@ async function loadDates() {
                 for (let row = 0; row < rows; row++) {
                     for (let col = 0; col < cols; col++) {
                         const logo = document.createElement('div');
-                        logo.className = 'coin';
+                        logo.className = 'dates-logo-background';
                         logo.style.left = (col * logoSize) + 'px';
                         logo.style.top = (row * logoSize) + 'px';
                         bg.appendChild(logo);
