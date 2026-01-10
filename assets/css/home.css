@@ -160,13 +160,13 @@
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.weekly-event-content {
+.home-weekly-event-content {
     display: flex;
     gap: 30px;
     align-items: center;
 }
 
-.weekly-event-info {
+.home-weekly-event-info {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -187,7 +187,7 @@
     object-fit: cover;
 }
 
-.weekly-event-name {
+.home-weekly-event-name {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: left;
@@ -200,7 +200,7 @@
     text-align: left;
 }
 
-.home-weekly-home-event-subtitle {
+.home-weekly-event-subtitle {
     font-size: 1rem;
     opacity: 0.9;
     text-align: left;

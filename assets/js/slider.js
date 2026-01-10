@@ -1,28 +1,28 @@
 let currentSlide = 0;
 
 function updateSlider() {
-    const slider = document.getElementById('slider');
+    const slider = document.getElementById('home-slider');
     if (slider) {
         slider.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 }
 
 function nextSlide() {
-    const slides = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('.home-slide');
     if (slides.length === 0) return;
     currentSlide = (currentSlide + 1) % slides.length;
     updateSlider();
 }
 
 function prevSlide() {
-    const slides = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('.home-slide');
     if (slides.length === 0) return;
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateSlider();
 }
 
 function populateUpcomingEvents() {
-    const slider = document.getElementById('slider');
+    const slider = document.getElementById('home-slider');
     if (!slider) return;
     
     const today = new Date();
@@ -48,7 +48,7 @@ function populateUpcomingEvents() {
     
     futureEvents.forEach(({ event, eventDate }) => {
         const slide = document.createElement('div');
-        slide.className = 'slide';
+        slide.className = 'home-slide';
         
         const eventCard = document.createElement('div');
         eventCard.className = 'home-event-card';
@@ -76,7 +76,7 @@ function populateUpcomingEvents() {
     
     if (futureEvents.length === 0) {
         slider.innerHTML = `
-            <div class="slide">
+            <div class="home-slide">
                 <div class="home-event-card">
                     <div class="home-event-image">📅</div>
                     <div class="home-event-details">
@@ -88,7 +88,7 @@ function populateUpcomingEvents() {
         `;
     }
      if (futureEvents.length <= 1) {
-        const controls = document.querySelector(".slider-controls");
+        const controls = document.querySelector(".home-slider-controls");
         controls.style.display = "none";
      }
     
@@ -154,14 +154,14 @@ function generateWeeklyEvents() {
         const monthDay = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         
         card.innerHTML = `
-            <div class="weekly-event-content">
+            <div class="home-weekly-event-content">
                 <div class="home-weekly-event-image">
                     <img src="assets/images/components/events/${event.image}" alt="${event.name}">
                 </div>
-                <div class="weekly-event-info">
-                    <div class="weekly-event-name">${event.name}</div>
+                <div class="home-weekly-event-info">
+                    <div class="home-weekly-event-name">${event.name}</div>
                     <div class="home-weekly-event-day">${event.start} ${dayName}, ${monthDay}</div>
-                    <div class="home-weekly-home-event-subtitle">${event.subtitle}</div>
+                    <div class="home-weekly-event-subtitle">${event.subtitle}</div>
                     <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>
                 </div>
             </div>
