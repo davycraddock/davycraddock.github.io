@@ -16,7 +16,7 @@ function generateSliderImages(imageFolderPath, sliderId, numberOfImages) {
             imageContainer.className = 'image-slider-slide-image';
             
             const img = document.createElement('img');
-            img.src = imageFolderPath + `image${i+j+1}.jpg`;
+            img.src = imageFolderPath + `image${i+j+1}.avif`;
             img.alt = `image${i+j+1}`;
             img.loading = 'lazy';
             
