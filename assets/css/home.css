@@ -102,7 +102,9 @@
 .home-weekly-events-section {
     padding: 80px 20px;
     background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)), 
-                url('/assets/images/home/team.png');
+                url('/assets/images/home/team.webp');
+    background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)), 
+                url('/assets/images/home/team.avif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
