@@ -1,6 +1,6 @@
 function initTimeline() {
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const scrollIndicator = document.querySelector('.scroll-indicator');
+    const timelineItems = document.querySelectorAll('.history-timeline-item');
+    const scrollIndicator = document.querySelector('.history-scroll-indicator');
     
     function checkScroll() {
         const scrollPos = window.scrollY;

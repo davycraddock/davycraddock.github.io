@@ -4,10 +4,10 @@ async function loadHeader() {
         const html = await response.text();
         document.getElementById('header-placeholder').innerHTML = html;
 
-        const dropdowns = document.querySelectorAll('.nav-dropdown');
+        const dropdowns = document.querySelectorAll('.header-nav-dropdown');
 
         dropdowns.forEach(dropdown => {
-            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+            const toggle = dropdown.querySelector('.header-header-nav-dropdown-toggle');
             
             toggle.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -26,7 +26,7 @@ async function loadHeader() {
         // Close dropdowns when clicking outside OR when clicking a dropdown link
         document.addEventListener('click', (e) => {
             // Check if click is a dropdown menu link
-            const clickedLink = e.target.closest('.nav-dropdown-menu a');
+            const clickedLink = e.target.closest('.header-header-nav-dropdown-menu a');
             
             if (clickedLink) {
                 // Allow the link to work, just close the dropdown
@@ -37,7 +37,7 @@ async function loadHeader() {
             }
             
             // Check if click is outside all dropdowns
-            const clickedInsideDropdown = e.target.closest('.nav-dropdown');
+            const clickedInsideDropdown = e.target.closest('.header-nav-dropdown');
             
             if (!clickedInsideDropdown) {
                 dropdowns.forEach(dropdown => {

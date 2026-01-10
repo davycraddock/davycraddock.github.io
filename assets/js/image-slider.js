@@ -9,11 +9,11 @@ function generateSliderImages(imageFolderPath, sliderId, numberOfImages) {
     
     for (let i = 0; i < numberOfImages; i += imagesPerSlide) {
         const slideDiv = document.createElement('div');
-        slideDiv.className = `slide-image-container`;
+        slideDiv.className = `image-slider-slide-image-container`;
         
         for (let j = 0; j < imagesPerSlide && (i + j) < numberOfImages; j++) {
             const imageContainer = document.createElement('div');
-            imageContainer.className = 'slide-image';
+            imageContainer.className = 'image-slider-slide-image';
             
             const img = document.createElement('img');
             img.src = imageFolderPath + `image${i+j+1}.jpg`;
@@ -50,7 +50,7 @@ async function loadImageSlider() {
             const numberOfImages = parseInt(placeholder.dataset.numberOfImages);
             placeholder.innerHTML = html;
 
-            const track = placeholder.querySelector('.slider-image-track');
+            const track = placeholder.querySelector('.image-slider-track');
             track.id = id;
 
             generateSliderImages(folder, id, numberOfImages);

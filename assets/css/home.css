@@ -1,31 +1,31 @@
 
-.events-section {
+.home-events-section {
     padding: 80px 20px;
 }
 
-.events-section h2 {
+.home-events-section h2 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 50px;
     color: #2c3e50;
 }
 
-.slider-container {
+.home-slider-container {
     margin: 0 auto;
     position: relative;
 }
 
-.slider {
+.home-slider {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-.slide {
+.home-slide {
     min-width: 100%;
     padding: 40px;
 }
 
-.event-card {
+.home-event-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -34,13 +34,13 @@
     margin: auto;
 }
 
-.event-image {
+.home-event-image {
   width: 100%;
-  height: 450px; /* set the height you want */
+  height: 450px;
   overflow: hidden;
 }
 
-.event-image img {
+.home-event-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -50,37 +50,21 @@
     float: right;
 }
 
-
-/* .event-image img{
-    width: 100%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: #008dd0;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-} */
-
-.event-details h3 {
+.home-event-details h3 {
     font-size: 2rem;
     margin-bottom: 15px;
     color: #2c3e50;
     text-align: left;
 }
 
-.event-details p {
+.home-event-details p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #555;
     margin-bottom: 20px;
 }
 
-.event-date {
+.home-event-date {
     display: inline-block;
     background: #008dd0;
     color: white;
@@ -90,7 +74,7 @@
     margin-bottom: 20px;
 }
 
-.slider-controls {
+.home-slider-controls {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -100,7 +84,7 @@
     pointer-events: none; 
 }
 
-.slider-btn {
+.home-slider-btn {
     background: transparent;
     border: 2px solid #007BFF;
     border-radius: 50%;
@@ -111,11 +95,11 @@
     margin: 0 -14px;
 }
 
-.slider-btn:hover {
+.home-slider-btn:hover {
     transform: translateY(-2px);
 }
 
-.dates-events-section {
+.home-weekly-events-section {
     padding: 80px 20px;
     background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)), 
                 url('/assets/images/home/team.png');
@@ -124,20 +108,8 @@
     background-attachment: fixed;
     color: white;
     position: relative;
-    margin-bottom: 60px;
 }
 
-.weekly-events-section {
-    padding: 80px 20px;
-    background: linear-gradient(rgba(0, 141, 208, 0.9), rgba(0, 141, 208, 0.4)), 
-                url('/assets/images/home/team.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-    position: relative;
-}
-.dates-events-section h2,
 .weekly-events-section h2 {
     text-align: center;
     font-size: 3rem;
@@ -145,44 +117,41 @@
     color: white;
 }
 
-.week-range {
+.home-week-range {
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 50px;
     opacity: 0.9;
 }
 
-.dates-events-container,
-.weekly-events-container {
+.home-weekly-events-container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.dates-events-grid,
-.weekly-events-grid {
+.home-weekly-events-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.weekly-event-card.race {
+.home-weekly-event-card.race {
     background: linear-gradient(135deg, rgba(255, 107, 107, 0.3), rgba(238, 90, 111, 0.3));
 }
 
-.weekly-event-card.training {
+.home-weekly-event-card.training {
     background: linear-gradient(135deg, rgba(79, 172, 254, 0.3), rgba(0, 242, 254, 0.3));
 }
 
-.weekly-event-card.social {
+.home-weekly-event-card.social {
     background: linear-gradient(135deg, rgba(67, 233, 123, 0.3), rgba(56, 249, 215, 0.3));
 }
 
-.weekly-event-card.workshop {
+.home-weekly-event-card.workshop {
     background: linear-gradient(135deg, rgba(250, 112, 154, 0.3), rgba(254, 225, 64, 0.3));
 }
 
-.dates-events-card,
-.weekly-event-card {
+.home-weekly-event-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -191,14 +160,12 @@
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.dates-events-content,
 .weekly-event-content {
     display: flex;
     gap: 30px;
     align-items: center;
 }
 
-.dates-events-info,
 .weekly-event-info {
     flex: 2;
     display: flex;
@@ -206,7 +173,7 @@
     gap: 10px;
 }
 
-.weekly-event-image {
+.home-weekly-event-image {
     flex: 1;
     max-width: 33.33%;
     aspect-ratio: 1;
@@ -214,41 +181,32 @@
     overflow: hidden;
 }
 
-.weekly-event-image img {
+.home-weekly-event-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.dates-events-name,
 .weekly-event-name {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: left;
 }
 
-.dates-events-day {
-    font-size: 1.1rem;
-    font-weight: 600;
-    opacity: 0.9;
-    text-align: center;
-}
-
-.weekly-event-day {
+.home-weekly-event-day {
     font-size: 1.1rem;
     font-weight: 600;
     opacity: 0.9;
     text-align: left;
 }
 
-.dates-events-subtitle,
-.weekly-event-subtitle {
+.home-weekly-home-event-subtitle {
     font-size: 1rem;
     opacity: 0.9;
     text-align: left;
 }
 
-.weekly-event-type {
+.home-weekly-event-type {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -256,7 +214,7 @@
     text-align: left;
 }
 
-.no-events-message {
+.home-no-events-message {
     text-align: center;
     font-size: 1.3rem;
     padding: 60px 20px;
@@ -266,21 +224,21 @@
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.event-subtitle {
+.home-event-subtitle {
     text-align: left;
 }
 
-.shop-section-container {
+.home-shop-section-container {
     margin-top: 60px;
 }
 
-.shop-grid {
+.home-shop-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.shop-item {
+.home-shop-item {
     background: rgba(255,255,255,0.2);
     backdrop-filter: blur(10px);
     border-radius: 15px;
@@ -292,11 +250,11 @@
 }
 
 
-.shop-item:hover {
+.home-shop-item:hover {
     transform: translateY(-5px);
 }
 
-.shop-item-image {
+.home-shop-item-image {
     width: 45%;
     aspect-ratio: 1;
     background: rgba(255, 255, 255, 0.3);
@@ -308,44 +266,46 @@
     justify-content: center;
 }
 
-.shop-item-image img {
+.home-shop-item-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.shop-item h3 {
+.home-shop-item h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
-.shop-item p {
+.home-shop-item p {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.shop-notice {
+.home-shop-notice {
     text-align: center;
     padding-bottom: 10px;
 }
 
-.instagram-feed {
-    padding: 60px 40px;
-}
-
-.instagram-section {
+.home-instagram-section {
     padding: 60px 60px;
     background: linear-gradient(45deg, 
-    #405DE6,  /* Indigo/Blue */
-    #5851DB,  /* Purple */
-    #833AB4,  /* Deep Purple */
-    #C13584,  /* Magenta */
-    #E1306C,  /* Red/Pink */
-    #FD1D1D,  /* Bright Red */
-    #F56040,  /* Orange */
-    #FCAF45,  /* Yellow/Orange */
-    #FFDC80   /* Light Yellow */
+    #405DE6,
+    #5851DB, 
+    #833AB4,  
+    #C13584, 
+    #E1306C,  
+    #FD1D1D,  
+    #F56040,  
+    #FCAF45,  
+    #FFDC80   
   );
+}
+
+/* 3rd party instagram feed styles */
+
+.instagram-feed {
+    padding: 60px 40px;
 }
 
 .juicer-feed {
@@ -367,7 +327,7 @@ html body .juicer-feed h1.referral a {
     gap: 20px;
 }
 
-.instagram-section h3 {
+.home-instagram-section h3 {
     font-size: 3rem;
     margin-bottom: 40px;
     text-align: center;

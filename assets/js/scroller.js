@@ -1,12 +1,12 @@
 async function loadScroller() {
 
-  const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+  const dropdownToggles = document.querySelectorAll('.header-header-nav-dropdown-toggle');
   
   if (window.innerWidth <= 768) {
       dropdownToggles.forEach(toggle => {
           toggle.addEventListener('click', function(e) {
               e.preventDefault();
-              this.closest('.nav-dropdown').classList.toggle('active');
+              this.closest('.header-nav-dropdown').classList.toggle('active');
           });
       });
   }

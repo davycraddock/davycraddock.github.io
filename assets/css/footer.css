@@ -8,7 +8,7 @@
     width:100%;
 }
 
-.governance-section {
+.footer-governance-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,20 +16,20 @@
     gap: 1rem;
 }
 
-.social-media-section {
+.footer-social-media-section {
     text-align: center;
     padding: 2rem 0;
     margin: 0 auto; 
     width:100%;
 }
 
-.social-icons {
+.footer-footer-social-icons {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
 }
 
-.social-icon {
+.footer-social-icon {
     width: 40px;
     height: 40px;
     display: flex;
@@ -41,34 +41,34 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.social-icon:hover {
+.footer-social-icon:hover {
     background-color: #3a3a3a;
     transform: scale(1.1);
 }
 
-.copyright-section p {
+.footer-copyright-section p {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
 }
 
-.sponsors-section {
+.footer-sponsors-section {
     margin-bottom: 3rem;
     padding-top: 3rem;
 }
 
-.sponsors-section > h3 {
+.footer-sponsors-section > h3 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
     color: #ffffff;
 }
 
-.sponsor-tier {
+.footer-sponsor-tier {
     margin-bottom: 2.5rem;
 }
 
-.sponsor-tier h4 {
+.footer-sponsor-tier h4 {
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
@@ -76,19 +76,19 @@
     letter-spacing: 1px;
 }
 
-.gold-tier h4 {
+.footer-gold-tier h4 {
     color: #ffd700;
 }
 
-.silver-tier h4 {
+.footer-silver-tier h4 {
     color: #c0c0c0;
 }
 
-.bronze-tier h4 {
+.footer-bronze-tier h4 {
     color: #cd7f32;
 }
 
-.sponsors-grid {
+.footer-sponsors-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -96,7 +96,7 @@
     gap: 2rem;
 }
 
-.sponsor-logo {
+.footer-sponsors-logo {
     background-color: #2a2a2a;
     background-size: contain;
     background-position: center;
@@ -108,53 +108,53 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sponsor-logo:hover {
+.footer-sponsors-logo:hover {
     transform: translateY(-5px);
 }
 
-.sponsor-logo.gold {
+.footer-sponsors-logo.gold {
     padding: 0;
    font-size: 0;
     border: 3px solid #ffd700;
     box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
 }
 
-.sponsor-logo.gold a img {
+.footer-sponsors-logo.gold a img {
  font-size: 1.5rem;
 }
 
-.sponsor-logo.gold:hover {
+.footer-sponsors-logo.gold:hover {
     box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
 }
 
-.sponsor-logo.silver {
+.footer-sponsors-logo.silver {
     padding: 0;
     font-size: 0;
     border: 2px solid #c0c0c0;
     box-shadow: 0 4px 15px rgba(192, 192, 192, 0.3);
 }
 
-.sponsor-logo.silver a img {
+.footer-sponsors-logo.silver a img {
  font-size: 1.2rem;
 }
 
-.sponsor-logo.silver:hover {
+.footer-sponsors-logo.silver:hover {
     box-shadow: 0 6px 25px rgba(192, 192, 192, 0.5);
 }
 
-.sponsor-logo.bronze {
+.footer-sponsors-logo.bronze {
     padding: 0;
     font-size: 0;
     border: 2px solid #cd7f32;
     box-shadow: 0 4px 10px rgba(205, 127, 50, 0.3);
 }
 
-.sponsor-logo.bronze a img {
+.footer-sponsors-logo.bronze a img {
  font-size: 1rem;
 }
 
 
-.sponsor-logo.bronze:hover {
+.footer-sponsors-logo.bronze:hover {
     box-shadow: 0 6px 20px rgba(205, 127, 50, 0.5);
 }
 

@@ -1,8 +1,4 @@
-/* #location-placeholder {
-    padding-bottom: 0;
-} */
-
-.map-container {
+.location-map-container  {
     height:450px;
 }
 

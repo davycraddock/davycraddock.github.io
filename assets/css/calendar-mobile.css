@@ -3,23 +3,23 @@
         padding: 40px 0px;
     }
 
-    .event-indicator {
+    .calendar-indicator {
         font-size: 0.5rem;
         text-align: center;
         line-height: 1.2;
         overflow-wrap: break-word;
     }
-    .month-card {
+    .calendar-card {
         border-radius: 0;
         padding: 30px 0;
     }
-    .day-cell {
+    .calendar-day-cell {
         max-width: 52px;
     }
 }
 
 @media (max-width: 599px) {
-    .day-cell {
+    .calendar-day-cell {
         max-width: 48px;
     }
 }

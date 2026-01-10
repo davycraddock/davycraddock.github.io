@@ -4,14 +4,14 @@
     padding: 40px 20px;
 }
 
-.month-navigation {
+.calendar-navigation {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
 
-.month-nav-btn {
+.calendar-nav-btn {
     background: transparent;
     border: 2px solid #007BFF;
     border-radius: 50%;
@@ -21,16 +21,16 @@
     transition: background 0.3s ease;
 }
 
-.month-nav-btn:hover {
+.calendar-nav-btn:hover {
     transform: translateY(-2px);
 }
 
-.month-nav-btn:disabled {
+.calendar-nav-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
 
-.current-month-year {
+.calendar-current {
     font-size: 2rem;
     font-weight: bold;
     color: #2c3e50;
@@ -38,24 +38,12 @@
     text-align: center;
 }
 
-.month-grid {
-    display: block;
-}
-
-.month-card {
+.calendar-card {
     background: white;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     margin-bottom: 60px;
-}
-
-.month-title {
-    font-size: 2rem;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
 }
 
 .calendar-grid {
@@ -64,7 +52,7 @@
     gap: 8px;
 }
 
-.day-header {
+.calendar-day-header {
     text-align: center;
     font-weight: bold;
     color: #666;
@@ -72,7 +60,7 @@
     font-size: 0.9rem;
 }
 
-.day-cell {
+.calendar-day-cell {
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
@@ -85,65 +73,65 @@
     min-height: 50px;
 }
 
-.day-cell:hover {
+.calendar-day-cell:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.day-cell.empty {
+.calendar-day-cell.empty {
     cursor: default;
 }
 
-.day-cell.empty:hover {
+.calendar-day-cell.empty:hover {
     transform: none;
     box-shadow: none;
 }
 
-.day-number {
+.calendar-day-number {
     font-size: 1rem;
     color: #333;
     font-weight: 600;
     margin-bottom: 2px;
 }
 
-.day-cell.has-event {
+.calendar-day-cell.has-event {
     color: white;
 }
 
-.day-cell.has-event .day-number {
+.calendar-day-cell.has-event .calendar-day-number {
     color: white;
 }
 
-.day-cell.swim {
+.calendar-day-cell.swim {
     background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
 }
 
-.day-cell.bike {
+.calendar-day-cell.bike {
     background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
 
-.day-cell.run {
+.calendar-day-cell.run {
     background: linear-gradient(135deg, #43e97b, #38f9d7);
 }
 
-.day-cell.robertson-ride,
-.day-cell.christmas-run,
-.day-cell.presentation {
+.calendar-day-cell.robertson-ride,
+.calendar-day-cell.christmas-run,
+.calendar-day-cell.presentation {
     background: linear-gradient(135deg, #fee140, #fee140);
 }
 
-.day-cell.club-champs,
-.day-cell.stu-ford,
-.day-cell.jan-hood,
-.day-cell.rwa,
-.day-cell.time-trials,
-.day-cell.duathlons,
-.day-cell.triathlons,
-.day-cell.event {
+.calendar-day-cell.club-champs,
+.calendar-day-cell.stu-ford,
+.calendar-day-cell.jan-hood,
+.calendar-day-cell.rwa,
+.calendar-day-cell.time-trials,
+.calendar-day-cell.duathlons,
+.calendar-day-cell.triathlons,
+.calendar-day-cell.event {
     background: linear-gradient(135deg, #f570fa, #fe40ce);
 }
 
-.event-indicator {
+.calendar-indicator {
     font-size: 0.7rem;
     text-align: center;
     line-height: 1.2;

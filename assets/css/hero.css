@@ -60,7 +60,7 @@
     color: white;
     max-width: 800px;
     padding: 40px;
-    animation: fadeInUp 1s ease;
+    animation: hero-fadeInUp 1s ease;
 }
 
 .hero-content h3 {
@@ -75,15 +75,15 @@
     font-size: 3em;
 }
 
-.alt-font {
+.hero-alt-font {
     font-weight: 400 !important;
     font-style: normal !important;
 }
-.alt-font {
+.hero-alt-font {
     font-family: "Dancing Script", sans-serif;
 }
 
-@keyframes fadeInUp {
+@keyframes hero-fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);

@@ -51,20 +51,20 @@ function populateUpcomingEvents() {
         slide.className = 'slide';
         
         const eventCard = document.createElement('div');
-        eventCard.className = 'event-card';
+        eventCard.className = 'home-event-card';
         
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const formattedDate = eventDate.toLocaleDateString('en-US', options);
         
         eventCard.innerHTML = `
-            <div class="event-overlay">
-                <div class="event-image"><img src="assets/images/components/events/${event.image}" alt="${event.name}"></div>
+            <div class="home-event-overlay">
+                <div class="home-event-image"><img src="assets/images/components/events/${event.image}" alt="${event.name}"></div>
             </div>
-            <div class="event-details">
-                <span class="event-date">${event.start} ${formattedDate}</span>
+            <div class="home-event-details">
+                <span class="home-event-date">${event.start} ${formattedDate}</span>
                 <h3>${event.name}</h3>
-                <p class="event-subtitle limit-lines-5">${event.subtitle}</p>
-                <div class="weekly-event-type">${typeLabels[event.nav]}</div>
+                <p class="home-event-subtitle limit-lines-5">${event.subtitle}</p>
+                <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>
             </div>
         `;
               eventCard.onclick = function() {
@@ -77,9 +77,9 @@ function populateUpcomingEvents() {
     if (futureEvents.length === 0) {
         slider.innerHTML = `
             <div class="slide">
-                <div class="event-card">
-                    <div class="event-image">📅</div>
-                    <div class="event-details">
+                <div class="home-event-card">
+                    <div class="home-event-image">📅</div>
+                    <div class="home-event-details">
                         <h3>Check Back Soon!</h3>
                         <p>No upcoming events scheduled at the moment. Visit our calendar page to see our full schedule and past events.</p>
                     </div>
@@ -131,7 +131,7 @@ function generateWeeklyEvents() {
     
     if (thisWeekEvents.length === 0) {
         weeklyEventsGrid.innerHTML = `
-            <div class="no-events-message">
+            <div class="home-no-events-message">
                 No events scheduled for this week. Check out our calendar for upcoming events!
             </div>
         `;
@@ -148,21 +148,21 @@ function generateWeeklyEvents() {
     
     thisWeekEvents.forEach(({ dateKey, event, eventDate }) => {
         const card = document.createElement('div');
-        card.className = `weekly-event-card ${event.type}`;
+        card.className = `home-weekly-event-card ${event.type}`;
         
         const dayName = dayNames[eventDate.getDay()];
         const monthDay = eventDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         
         card.innerHTML = `
             <div class="weekly-event-content">
-                <div class="weekly-event-image">
+                <div class="home-weekly-event-image">
                     <img src="assets/images/components/events/${event.image}" alt="${event.name}">
                 </div>
                 <div class="weekly-event-info">
                     <div class="weekly-event-name">${event.name}</div>
-                    <div class="weekly-event-day">${event.start} ${dayName}, ${monthDay}</div>
-                    <div class="weekly-event-subtitle">${event.subtitle}</div>
-                    <div class="weekly-event-type">${typeLabels[event.nav]}</div>
+                    <div class="home-weekly-event-day">${event.start} ${dayName}, ${monthDay}</div>
+                    <div class="home-weekly-home-event-subtitle">${event.subtitle}</div>
+                    <div class="home-weekly-event-type">${typeLabels[event.nav]}</div>
                 </div>
             </div>
         `;
