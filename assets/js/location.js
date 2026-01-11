@@ -16,7 +16,11 @@ async function loadLocation() {
             document.getElementById("location-title").innerText = title;
         }
         document.getElementById("venue-details").innerText = venue;
-        document.getElementById("parking-details").innerText = parking;
+        if(parking){
+            document.getElementById("parking-details").innerText = parking;
+        } else {
+            document.getElementById("parking-section").style.display = 'none';
+        }
         if(transport)
         {
         document.getElementById("transport-details").innerText = transport;
