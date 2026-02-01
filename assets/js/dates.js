@@ -33,7 +33,7 @@ function populateDates(eventId, maxEvents, from = null, to = null) {
             document.getElementById("dates-events-subheader").innerText = `(Next ${maxEvents} Sessions)`;
         }
 
-        const DateNow = new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney"});
+        const dateNow = new Date(new Date().toLocaleString("en-AU", { timeZone: "Australia/Sydney"}));
 
         filteredEvents.forEach(x => {
             const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -44,7 +44,7 @@ function populateDates(eventId, maxEvents, from = null, to = null) {
             card.innerHTML = `<div class="dates-events-content">
             <div class="dates-events-info">
                     <div class="dates-events-day">${x.event.start} ${dayName}, ${monthDay}</div>
-                    ${x.event.registerurl && x.eventDate >= DateNow ? `<p><a class="dates-events-a" href="${x.event.registerurl}" target="_blank">Register Here</a></p>` : ""}
+                    ${x.event.registerurl && x.eventDate >= dateNow ? `<p><a class="dates-events-a" href="${x.event.registerurl}" target="_blank">Register Here</a></p>` : ""}
                     ${x.event.resultsurl ? `<p><a class="dates-events-a" href="${x.event.resultsurl}" target="_blank">Results</a></p>` : ""}
                 </div>
             </div>
