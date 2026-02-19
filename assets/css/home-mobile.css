@@ -46,4 +46,30 @@
     .home-hero-content {
         margin-top: 60px;
     }
+
+        .home-shop-slide {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .shop-slider-btn {
+        width: 40px;
+        /* height: 40px; */
+        font-size: 3rem;
+    }
+    
+    .home-shop-slider-wrapper {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-shop-slide {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .home-shop-slide {
+        grid-template-columns: 1fr;
+    }
 }

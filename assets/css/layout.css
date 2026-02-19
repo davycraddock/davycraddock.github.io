@@ -151,6 +151,10 @@ li {
   opacity: 0.9;
 }
 
+.tiny {
+    font-size: 0.7rem;
+}
+
 .small {
     font-size: 0.9rem;
 }
@@ -172,4 +176,30 @@ li {
 .content-placeholder {
     max-width: 1400px;
     margin: auto;
+}
+
+/* Ensure ALL sliders maintain their overflow hidden */
+/* Only apply overflow hidden to slider containers, not the tracks */
+.home-shop-slider-container {
+    overflow: hidden !important;
+}
+
+.image-slider-container {
+    overflow: hidden !important;
+}
+
+/* Allow the slider tracks to move freely */
+.home-shop-slider,
+.image-slider-track {
+    overflow: visible !important;
+}
+
+/* Modal slider container needs overflow hidden */
+.product-modal-slider {
+    overflow: hidden !important;
+}
+
+/* But modal slider track needs to move */
+.product-modal-images {
+    overflow: visible !important;
 }
