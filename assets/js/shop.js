@@ -6,82 +6,90 @@ let currentProductImages = [];
 
 function initShopSlider() {
     // Your product data with sizes
-    key='pk_test_xClPkMNg0WHEehzRM0IWqG4X';
     shopProducts = [
         { 
             image: '/assets/images/home/shop/Caps.jpeg', 
             title: 'Junior Trisuit Rental', 
             price: '$25.00',
-            button: 'https://buy.stripe.com/test_14AaEX9ayaeB7lab4e2B20e'
+            description: 'With the rate that your kids are growing, it\u0027s hard to keep them in a tri suit that fits.\nIf this sounds like your kids, contact the junior coach by emailing juniors@cronullatriclub.com.au or email train@cronullatriclub.com.au',
+            link: 'https://buy.stripe.com/test_9B63cv4VxdagaRAfDrbsc01'
         },
         { 
             image: '/assets/images/home/shop/Socks.jpg', 
             title: 'Beginner Bike Rental', 
             price: '$100.00', 
-            button: 'https://buy.stripe.com/test_00wbJ186u86taxm4FQ2B201' // No sizes, direct button
+            description: 'Perfect for those new to the sport looking to try out triathlon without the commitment of purchasing equipment.\n If you would like to rent a bike before making a commitment, contact us at train@cronullatriclub.com.au',
+            link: 'https://buy.stripe.com/test_6oU00jgEfc6c8Jsdvjbsc0e' // No sizes, direct link
         },
         { 
             image: '/assets/images/home/shop/Trisuit.jpg', 
             title: 'Long Socks', 
             price: '$20.00',
+            description: 'Cycling specific high top sock.\n Mesh weave ventilation for the top of the foot.\nSuperior wicking to keep feet dry.',
             sizes: [
-                { name: 'Small', button: 'https://buy.stripe.com/test_6oU7sLeuS9ax34Uegq2B202' },
-                { name: 'Medium', button: 'https://buy.stripe.com/test_eVqfZh3Qe86tcFu2xI2B203' },
-                { name: 'Large', button: 'https://buy.stripe.com/test_3cI8wP4Ui72p7la1tE2B204' }
+                { name: 'Small', link: 'https://buy.stripe.com/test_bJe28r0Fhc6ccZIfDrbsc0c' },
+                { name: 'Medium', link: 'https://buy.stripe.com/test_6oUeVd1Jlgms7FofDrbsc0b' },
+                { name: 'Large', link: 'https://buy.stripe.com/test_6oU5kD2Npgmsf7Q76Vbsc0a' }
             ]
         },
         { 
             image: '/assets/images/home/shop/Caps.jpeg', 
             title: 'Running Visor', 
             price: '$20.00', 
-            button: 'buy_btn_1SyPHnGsG92yi5oUJirPL3zo'
+            description: 'Lightweight, breathable running visor with CTC logo. Perfect for sunny training sessions and race day.',
+            link: 'https://buy.stripe.com/test_bJe9ATew7c6c7Fo3UJbsc08' 
         },
         { 
             image: '/assets/images/home/shop/Trisuit.jpg', 
             title: 'Race Jersey', 
-            price: '$129.99',
+            price: '$66.50',
+            description: 'Tineli\u0027s drive to make the best race-day jersey possible has delivered the Aero Pro. It\u0027s lightweight, extremely aerodynamic and surprisingly comfortable for such a focused item. Tineli is proud to bring cutting edge, pro-level tech to the custom market. For size 152: Chest 78cm Length 55cm',
             sizes: [
-                { name: 'Youth - 152', button: 'https://buy.stripe.com/test_6oU00j72q1I5axm2xI2B205' }
+                { name: 'Youth - 152', link: 'https://buy.stripe.com/test_dRm14n5ZB5HOf7QgHvbsc09' }
             ]
         },
         { 
             image: '/assets/images/home/shop/Caps.jpeg', 
             title: 'Polo Shirt', 
-            price: '$19.99', 
+            price: '$37.80', 
+            description: '140gsm QuickDry enhanced moisture management fabric. Button up opening. Double stitched hems for uncompromised durability.',
             sizes: [
-                { name: 'Womens - Small', button: 'https://buy.stripe.com/test_9B66oHdqO9ax8peb4e2B206' }
+                { name: 'Womens - Small', link: 'https://buy.stripe.com/test_3cI5kDfAbfio4tc9f3bsc0d' }
             ] 
         },
                 { 
             image: '/assets/images/home/shop/Trisuit.jpg', 
             title: 'Club Champs Jacket', 
-            price: '$20.00',
+            description: 'Lightweight, water-resistant jacket perfect for training and race day. Club Champs 40 Years Jacket.',
+            price: '$24.00',
             sizes: [
-                { name: 'Womens - 8', button: 'https://buy.stripe.com/test_eVqdR94Ui1I5eNC3BM2B209' },
-                { name: 'Womens - 10', button: 'https://buy.stripe.com/test_eVqfZhbiGfyVeNC0pA2B208' },
-                { name: 'Mens - Small', button: 'https://buy.stripe.com/test_aFa28r5Ym72pfRGc8i2B207' }
+                { name: 'Womens - 8', link: 'https://buy.stripe.com/test_aFa6oHcnZc6ccZI0Ixbsc06' },
+                { name: 'Womens - 10', link: 'https://buy.stripe.com/test_aFa3cvbjV1ry6Bk3UJbsc07' }
             ]
         },
         { 
             image: '/assets/images/home/shop/Caps.jpeg', 
             title: 'Club Beanie', 
             price: '$8.00', 
-            button: 'https://buy.stripe.com/test_3cI6oH3Qe0E16h6b4e2B20a' 
+            description: 'Keep the noggin warm during those cool winter training sessions with a CTC Fleece beanie.',
+            link: 'https://buy.stripe.com/test_6oUaEXafRdage3M62Rbsc05' 
         },
         { 
             image: '/assets/images/home/shop/Caps.jpeg', 
             title: 'Swimwear', 
-            price: '$8.00', 
+            price: '$42.00', 
+            description: 'High quality, comfortable swimwear perfect for training and racing.',
             sizes: [
-                { name: 'Womens - XXL', button: 'https://buy.stripe.com/test_eVqeVdaeC2M948Y6NY2B20c' },
-                { name: 'Womens - XXXL', button: 'https://buy.stripe.com/test_8x2cN586u2M9fRGb4e2B20d' }
+                { name: 'Womens - XXL', link: 'https://buy.stripe.com/test_9B614n1Jl3zG0cWfDrbsc02' },
+                { name: 'Womens - XXXL', link: 'https://buy.stripe.com/test_28EaEXds3fio6Bk4YNbsc03' }
             ]
         },
         { 
             image: '/assets/images/home/shop/Caps.jpeg', 
             title: 'Hooded Towel', 
-            price: '$8.00', 
-            button: 'https://buy.stripe.com/test_fZubJ15YmaeB48Y4FQ2B20b' 
+            price: '$52.00', 
+            description: 'No more embarrassing, awkward changes at the beach car park or the pool change room. Take your hooded towel to the gym, swim club, sport carnivals, water park and even camping. Ideal for all occasions.',
+            link: 'https://buy.stripe.com/test_5kQ3cvafR1ry8Js9f3bsc04' 
         },
     ];
     
@@ -97,104 +105,6 @@ function getItemsPerSlide() {
     return 8;                     // 4x2 grid on desktop
 }
 
-// function buildShopSlider() {
-//     const slider = document.getElementById('shopSlider');
-//     const dotsContainer = document.getElementById('shopSliderDots');
-//     const itemsPerSlide = getItemsPerSlide();
-    
-//     shopTotalSlides = Math.ceil(shopProducts.length / itemsPerSlide);
-//     shopCurrentSlide = 0;
-    
-//     slider.innerHTML = '';
-//     dotsContainer.innerHTML = '';
-    
-//     // Create slides
-//     for (let i = 0; i < shopTotalSlides; i++) {
-//         const slideDiv = document.createElement('div');
-//         slideDiv.className = 'home-shop-slide';
-        
-//         const startIdx = i * itemsPerSlide;
-//         const endIdx = Math.min(startIdx + itemsPerSlide, shopProducts.length);
-        
-//         for (let j = startIdx; j < endIdx; j++) {
-//             const product = shopProducts[j];
-//             const itemDiv = document.createElement('div');
-//             itemDiv.className = 'home-shop-item';
-            
-//             // Check if product has sizes or direct link
-//             let buttonHTML = '';
-//             if (product.sizes) {
-//                 // Product with size options
-//                 const selectId = `product-size-${j}`;
-//                 buttonHTML = `
-//                     <select id="${selectId}" class="product-size-select">
-//                         <option value="">Select Size</option>
-//                         ${product.sizes.map(size => `<option value="${size.link}">${size.name}</option>`).join('')}
-//                     </select>
-//                     <button class="btn" onclick="buyProductWithSize('${selectId}')">Buy Now</button>
-//                 `;
-//             } else {
-//                 // Product with direct link
-//                 buttonHTML = `
-//                 <div class="product-no-size-spacer"></div>
-
-//                 <stripe-buy-button
-//                 class="stripe-buy-button"
-//   buy-button-id="${product.button}"
-//   publishable-key="${key}"
-// >
-// </stripe-buy-button>`;
-//             }
-            
-//             itemDiv.innerHTML = `
-//                 <div onclick="openProductModal(${j})">
-//                 <div class="home-shop-item-image">
-//                     <img src="${product.image}" alt="${product.title}">
-//                 </div>
-//                 <h3>${product.title}</h3>
-//                 <p>${product.price}</p>
-//                 </div>
-//                 ${buttonHTML}
-//             `;
-            
-//             slideDiv.appendChild(itemDiv);
-//         }
-        
-//         slider.appendChild(slideDiv);
-        
-//         // Create dot
-//         const dot = document.createElement('div');
-//         dot.className = 'shop-slider-dot';
-//         if (i === 0) dot.classList.add('active');
-//         dot.onclick = () => shopGoToSlide(i);
-//         dotsContainer.appendChild(dot);
-//     }
-// }
-
-// Modal Functions
-
-function showStripeButton(selectId, buttonContainerId, productIndex) {
-    const select = document.getElementById(selectId);
-    const buttonContainer = document.getElementById(buttonContainerId);
-    const sizeIndex = parseInt(select.value);
-    
-    if (select.value === '') {
-        buttonContainer.innerHTML = '';
-        return;
-    }
-    
-    const product = shopProducts[productIndex];
-    const selectedSize = product.sizes[sizeIndex];
-    
-    // Clear and create new Stripe button
-    buttonContainer.innerHTML = `
-        <stripe-buy-button
-            buy-button-id="${selectedSize.button}"
-            publishable-key="${product.key}"
-        ></stripe-buy-button>
-    `;
-}
-
 function buildShopSlider() {
     const slider = document.getElementById('shopSlider');
     const dotsContainer = document.getElementById('shopSliderDots');
@@ -206,6 +116,7 @@ function buildShopSlider() {
     slider.innerHTML = '';
     dotsContainer.innerHTML = '';
     
+    // Create slides
     for (let i = 0; i < shopTotalSlides; i++) {
         const slideDiv = document.createElement('div');
         slideDiv.className = 'home-shop-slide';
@@ -218,37 +129,33 @@ function buildShopSlider() {
             const itemDiv = document.createElement('div');
             itemDiv.className = 'home-shop-item';
             
+            // Check if product has sizes or direct link
             let buttonHTML = '';
             if (product.sizes) {
+                // Product with size options
                 const selectId = `product-size-${j}`;
-                const buttonContainerId = `stripe-button-${j}`;
-                
-                buttonHTML = `
-                    <select id="${selectId}" class="product-size-select" onchange="showStripeButton('${selectId}', '${buttonContainerId}', ${j})">
-                        <option value="">Select Size</option>
-                        ${product.sizes.map((size, idx) => `<option value="${idx}">${size.name}</option>`).join('')}
-                    </select>
-                    <div id="${buttonContainerId}" class="stripe-button-container"></div>
-                `;
+buttonHTML = `
+    <select id="${selectId}" class="product-size-select" onchange="toggleBuyButton('${selectId}')">
+        <option value="">Select Size</option>
+        ${product.sizes.map(size => `<option value="${size.link}">${size.name}</option>`).join('')}
+    </select>
+    <button id="buyBtn-${selectId}" class="btn home-shop-button" onclick="buyProductWithSize('${selectId}')" disabled>Buy Now</button>
+`;
             } else {
+                // Product with direct link
                 buttonHTML = `
-                    <div class="product-no-size-spacer"></div>
-                    <div class="stripe-button-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                        buy-button-id="${product.button}"
-                        publishable-key="${product.key}"
-                    ></stripe-buy-button>
-                    </div>
-                `;
+                <div class="product-no-size-spacer"></div>
+                <button class="btn home-shop-button" onclick="window.open('${product.link}', '_blank')">Buy Now</button>`;
             }
             
             itemDiv.innerHTML = `
-                <div class="home-shop-item-image" onclick="openProductModal(${j})">
+                <div onclick="openProductModal(${j})">
+                <div class="home-shop-item-image">
                     <img src="${product.image}" alt="${product.title}">
                 </div>
                 <h3>${product.title}</h3>
                 <p>${product.price}</p>
+                </div>
                 ${buttonHTML}
             `;
             
@@ -257,6 +164,7 @@ function buildShopSlider() {
         
         slider.appendChild(slideDiv);
         
+        // Create dot
         const dot = document.createElement('div');
         dot.className = 'shop-slider-dot';
         if (i === 0) dot.classList.add('active');
@@ -265,6 +173,13 @@ function buildShopSlider() {
     }
 }
 
+function toggleBuyButton(selectId) {
+    const select = document.getElementById(selectId);
+    const buyButton = document.getElementById(`buyBtn-${selectId}`);
+    buyButton.disabled = !select.value;
+}
+
+// Modal Functions
 function openProductModal(productIndex) {
     const product = shopProducts[productIndex];
     const modal = document.getElementById('productModal');
@@ -304,16 +219,27 @@ function openProductModal(productIndex) {
     
     if (product.sizes) {
         const selectId = 'productModalSize';
+        // sizeContainer.innerHTML = `
+        //     <select id="${selectId}" class="product-modal-size-select">
+        //         <option value="">Select Size</option>
+        //         ${product.sizes.map(size => `<option value="${size.link}">${size.name}</option>`).join('')}
+        //     </select>
+        // `;
+        // buttonContainer.innerHTML = `<button class="btn" onclick="buyProductWithSize('${selectId}')">Buy Now</button>`;
+
+
         sizeContainer.innerHTML = `
-            <select id="${selectId}" class="product-modal-size-select">
-                <option value="">Select Size</option>
-                ${product.sizes.map(size => `<option value="${size.link}">${size.name}</option>`).join('')}
-            </select>
+            <select id="${selectId}" class="product-modal-size-select" onchange="toggleBuyButton('${selectId}')">
+        <option value="">Select Size</option>
+        ${product.sizes.map(size => `<option value="${size.link}">${size.name}</option>`).join('')}
+    </select>
         `;
-        buttonContainer.innerHTML = `<button class="btn" onclick="buyProductWithSize('${selectId}')">Buy Now</button>`;
+        buttonContainer.innerHTML = `
+    <button id="buyBtn-${selectId}" class="btn home-shop-button" onclick="buyProductWithSize('${selectId}')" disabled>Buy Now</button>
+`;
     } else {
         sizeContainer.innerHTML = '<div class="product-no-size-spacer"></div>';
-        buttonContainer.innerHTML = `<button class="btn" onclick="window.open('${product.link}', '_blank')">Buy Now</button>`;
+        buttonContainer.innerHTML = `<button class="btn home-shop-button" onclick="window.open('${product.link}', '_blank')">Buy Now</button>`;
     }
     
     // Show modal
