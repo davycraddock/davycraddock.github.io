@@ -76,25 +76,25 @@
 
 
 /* Responsive Design */
+/* Large tablets and smaller desktops: 3 columns, 2 rows */
 @media (max-width: 1200px) {
     .home-shop-slide {
-        gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
     
     .home-shop-item h3 {
         font-size: 1.2rem;
         /* min-height: 3.6rem; */
     }
-    
-    .home-shop-item-image {
-        width: 50%;
-    }
 }
 
-@media (max-width: 1024px) {
+/* Tablets: 2 columns, 2 rows */
+@media (max-width: 900px) {
     .home-shop-slide {
-        gap: 12px;
-        padding: 0 8px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px;
     }
     
     .home-shop-item {
@@ -107,53 +107,55 @@
     }
     
     .home-shop-item-image {
-        width: 55%;
+        width: 60%;
     }
     
     .product-size-select,
     .home-shop-button {
-        width: 70%;
-        font-size: 0.95rem;
+        width: 75%;
     }
     
     .shop-slider-btn {
-        width: 45px;
+        width: 40px;
         font-size: 2.5rem;
     }
 }
 
-@media (max-width: 768px) {
+/* Mobile: 1 column, 2 rows */
+@media (max-width: 600px) {
     .home-shop-slide {
-        gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px;
         padding: 0 5px;
     }
     
     .home-shop-item {
-        padding: 12px;
+        padding: 20px;
     }
     
     .home-shop-item h3 {
-        font-size: 1rem;
-        /* min-height: 3rem; */
+        font-size: 1.2rem;
+        /* min-height: 3.6rem; */
     }
     
     .home-shop-item p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .home-shop-item-image {
-        width: 60%;
+        width: 50%;
     }
     
     .product-size-select,
     .home-shop-button {
         width: 85%;
         padding: 12px;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .shop-slider-btn {
-        width: 40px;
+        width: 35px;
         font-size: 2rem;
     }
     
@@ -162,83 +164,26 @@
     }
 }
 
-@media (max-width: 600px) {
-    .home-shop-slide {
-        gap: 8px;
-        padding: 0 5px;
-    }
-    
+/* Very small mobile */
+@media (max-width: 400px) {
     .home-shop-item {
-        padding: 12px;
+        padding: 15px;
     }
     
     .home-shop-item h3 {
-        font-size: 0.9rem;
-        /* min-height: 2.7rem; */
-    }
-    
-    .home-shop-item p {
-        font-size: 0.85rem;
-    }
-    
-    .home-shop-item-image {
-        width: 65%;
-        margin-bottom: 10px;
+        font-size: 1.1rem;
+        /* min-height: 3.3rem; */
     }
     
     .product-size-select,
     .home-shop-button {
         width: 95%;
-        padding: 12px;
-        font-size: 0.85rem;
-    }
-    
-    .shop-slider-btn {
-        width: 35px;
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .home-shop-slide {
-        gap: 6px;
-        padding: 0 3px;
-    }
-    
-    .home-shop-item {
-        padding: 12px;
-    }
-    
-    .home-shop-item h3 {
-        font-size: 0.8rem;
-        /* min-height: 2.4rem; */
-        margin-bottom: 5px;
-    }
-    
-    .home-shop-item p {
-        font-size: 0.8rem;
-        margin-bottom: 5px;
-    }
-    
-    .home-shop-item-image {
-        width: 70%;
-        margin-bottom: 8px;
-    }
-    
-    .product-size-select,
-    .home-shop-button {
-        width: 100%;
-        padding: 12px;
-        font-size: 0.8rem;
-        margin-bottom: 5px;
+        font-size: 0.95rem;
     }
     
     .shop-slider-btn {
         width: 30px;
-        font-size: 1.5rem;
-    }
-    
-    .home-shop-slider-wrapper {
-        gap: 5px;
+        font-size: 1.8rem;
     }
 }
+

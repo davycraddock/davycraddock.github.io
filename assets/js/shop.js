@@ -5,7 +5,7 @@ let currentProductImageIndex = 0;
 let currentProductImages = [];
 
 function initShopSlider() {
-    // Your product data with sizes
+
     shopProducts = [
         { 
             image: '/assets/images/home/shop/Caps.jpeg', 
@@ -260,19 +260,14 @@ function updateProductModalSlider() {
 }
 
 function prevProductImage() {
-    if (currentProductImageIndex > 0) {
-        currentProductImageIndex--;
-        updateProductModalSlider();
-    }
+    currentProductImageIndex = (currentProductImageIndex - 1 + currentProductImages.length) % currentProductImages.length;
+    updateProductModalSlider();
 }
 
 function nextProductImage() {
-    if (currentProductImageIndex < currentProductImages.length - 1) {
-        currentProductImageIndex++;
-        updateProductModalSlider();
-    }
+    currentProductImageIndex = (currentProductImageIndex + 1) % currentProductImages.length;
+    updateProductModalSlider();
 }
-
 // Close modal when clicking outside
 window.onclick = function(event) {
     const modal = document.getElementById('productModal');
@@ -312,17 +307,13 @@ function updateShopSlider() {
 }
 
 function shopSliderNext() {
-    if (shopCurrentSlide < shopTotalSlides - 1) {
-        shopCurrentSlide++;
-        updateShopSlider();
-    }
+    shopCurrentSlide = (shopCurrentSlide + 1) % shopTotalSlides;
+    updateShopSlider();
 }
 
 function shopSliderPrev() {
-    if (shopCurrentSlide > 0) {
-        shopCurrentSlide--;
-        updateShopSlider();
-    }
+    shopCurrentSlide = (shopCurrentSlide - 1 + shopTotalSlides) % shopTotalSlides;
+    updateShopSlider();
 }
 
 function shopGoToSlide(index) {
