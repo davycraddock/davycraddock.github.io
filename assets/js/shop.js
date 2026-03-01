@@ -8,21 +8,25 @@ function initShopSlider() {
 
     shopProducts = [
         { 
-            image: '/assets/images/home/shop/Caps.jpeg', 
+            image: '/assets/images/shop/trisuit.avif', 
             title: 'Junior Trisuit Rental', 
             price: '$25.00',
             description: 'With the rate that your kids are growing, it\u0027s hard to keep them in a tri suit that fits.\nIf this sounds like your kids, contact the junior coach by emailing juniors@cronullatriclub.com.au or email train@cronullatriclub.com.au',
             link: 'https://buy.stripe.com/test_9B63cv4VxdagaRAfDrbsc01'
         },
         { 
-            image: '/assets/images/home/shop/Socks.jpg', 
+            image: '/assets/images/shop/bike.avif', 
             title: 'Beginner Bike Rental', 
             price: '$100.00', 
             description: 'Perfect for those new to the sport looking to try out triathlon without the commitment of purchasing equipment.\n If you would like to rent a bike before making a commitment, contact us at train@cronullatriclub.com.au',
             link: 'https://buy.stripe.com/test_6oU00jgEfc6c8Jsdvjbsc0e' // No sizes, direct link
         },
         { 
-            image: '/assets/images/home/shop/Trisuit.jpg', 
+            image: '/assets/images/shop/socks-right.avif', 
+            images: [
+                '/assets/images/shop/socks-right.avif',
+                '/assets/images/shop/socks-left.avif'
+            ],
             title: 'Long Socks', 
             price: '$20.00',
             description: 'Cycling specific high top sock.\n Mesh weave ventilation for the top of the foot.\nSuperior wicking to keep feet dry.',
@@ -33,7 +37,7 @@ function initShopSlider() {
             ]
         },
         { 
-            image: '/assets/images/home/shop/Caps.jpeg', 
+            image: '/assets/images/shop/caps.avif', 
             title: 'Running Visor', 
             price: '$20.00', 
             description: 'Lightweight, breathable running visor with CTC logo. Perfect for sunny training sessions and race day.',
@@ -49,7 +53,11 @@ function initShopSlider() {
             ]
         },
         { 
-            image: '/assets/images/home/shop/Caps.jpeg', 
+            image: '/assets/images/shop/polo-front.avif', 
+            images: [
+                '/assets/images/shop/polo-front.avif',
+                '/assets/images/shop/polo-back.avif'
+            ],
             title: 'Polo Shirt', 
             price: '$37.80', 
             description: '140gsm QuickDry enhanced moisture management fabric. Button up opening. Double stitched hems for uncompromised durability.',
@@ -58,7 +66,12 @@ function initShopSlider() {
             ] 
         },
                 { 
-            image: '/assets/images/home/shop/Trisuit.jpg', 
+            image: '/assets/images/shop/jacket.avif', 
+            images: [
+                '/assets/images/shop/jacket.avif',
+                '/assets/images/shop/jacket-size.avif',
+                '/assets/images/shop/jacket-logo.avif'
+            ],
             title: 'Club Champs Jacket', 
             description: 'Lightweight, water-resistant jacket perfect for training and race day. Club Champs 40 Years Jacket.',
             price: '$24.00',
@@ -68,14 +81,14 @@ function initShopSlider() {
             ]
         },
         { 
-            image: '/assets/images/home/shop/Caps.jpeg', 
+            image: '/assets/images/shop/beanie.avif', 
             title: 'Club Beanie', 
             price: '$8.00', 
             description: 'Keep the noggin warm during those cool winter training sessions with a CTC Fleece beanie.',
             link: 'https://buy.stripe.com/test_6oUaEXafRdage3M62Rbsc05' 
         },
         { 
-            image: '/assets/images/home/shop/Caps.jpeg', 
+            image: '/assets/images/shop/swim.avif', 
             title: 'Swimwear', 
             price: '$42.00', 
             description: 'High quality, comfortable swimwear perfect for training and racing.',
@@ -85,7 +98,12 @@ function initShopSlider() {
             ]
         },
         { 
-            image: '/assets/images/home/shop/Caps.jpeg', 
+            image: '/assets/images/shop/towel-front.avif', 
+            images: [
+                '/assets/images/shop/towel-front.avif',
+                '/assets/images/shop/towel-back.avif',
+                '/assets/images/shop/towel-side.avif'
+            ],
             title: 'Hooded Towel', 
             price: '$52.00', 
             description: 'No more embarrassing, awkward changes at the beach car park or the pool change room. Take your hooded towel to the gym, swim club, sport carnivals, water park and even camping. Ideal for all occasions.',
