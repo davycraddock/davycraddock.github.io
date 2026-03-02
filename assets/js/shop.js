@@ -44,7 +44,11 @@ function initShopSlider() {
             link: 'https://buy.stripe.com/test_bJe9ATew7c6c7Fo3UJbsc08' 
         },
         { 
-            image: '/assets/images/home/shop/Trisuit.jpg', 
+            image: '/assets/images/shop/jersey-front.avif', 
+            images: [
+                '/assets/images/shop/jersey-front.avif',
+                '/assets/images/shop/jersey-back.avif'
+            ],
             title: 'Race Jersey', 
             price: '$66.50',
             description: 'Tineli\u0027s drive to make the best race-day jersey possible has delivered the Aero Pro. It\u0027s lightweight, extremely aerodynamic and surprisingly comfortable for such a focused item. Tineli is proud to bring cutting edge, pro-level tech to the custom market. For size 152: Chest 78cm Length 55cm',
